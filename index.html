@@ -19,7 +19,6 @@
       color: #ccd0dc;
     }
 
-    /* Each slide */
     .slide {
       min-height: 100vh;
       display: flex;
@@ -32,7 +31,6 @@
       overflow: hidden;
     }
 
-    /* Orb background glow */
     .orb-glow {
       position: absolute;
       width: 500px;
@@ -43,18 +41,15 @@
       filter: blur(60px);
     }
 
-    /* Logo */
     .logo {
       font-size: 12px;
       letter-spacing: 4px;
-      color: #4a5060;
+      color: #6a7080;
       position: absolute;
       top: 40px;
       left: 40px;
     }
-    .logo { color: #6a7080; }
 
-    /* Typography */
     h1 {
       font-size: 64px;
       font-weight: 300;
@@ -65,10 +60,7 @@
       margin-bottom: 24px;
     }
 
-    h1 em {
-      color: #ff6b6b;
-      font-style: normal;
-    }
+    h1 em { color: #ff6b6b; font-style: normal; }
 
     h2 {
       font-size: 48px;
@@ -80,20 +72,17 @@
       margin-bottom: 20px;
     }
 
-    h2 em {
-      color: #ff6b6b;
-      font-style: normal;
-    }
+    h2 em { color: #ff6b6b; font-style: normal; }
 
     .subtitle {
       font-size: 18px;
       color: #6a7080;
       text-align: center;
-      max-width: 600px;
+      max-width: 650px;
       line-height: 1.6;
     }
 
-    /* The problem slide */
+    /* Problem grid */
     .problem-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -124,7 +113,7 @@
       line-height: 1.6;
     }
 
-    /* Chat comparison */
+    /* Comparison */
     .comparison {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -139,7 +128,6 @@
       border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 20px;
       padding: 32px;
-      position: relative;
     }
 
     .chat-box.polarity {
@@ -155,17 +143,10 @@
       text-transform: uppercase;
     }
 
-    .chat-box.polarity .chat-label {
-      color: #ff6b6b;
-    }
+    .chat-box.polarity .chat-label { color: #ff6b6b; }
 
-    .chat-msg {
-      margin-bottom: 16px;
-    }
-
-    .chat-msg.user {
-      text-align: right;
-    }
+    .chat-msg { margin-bottom: 16px; }
+    .chat-msg.user { text-align: right; }
 
     .chat-msg .bubble {
       display: inline-block;
@@ -185,13 +166,49 @@
       padding: 8px 0;
     }
 
-    .chat-box.polarity .chat-msg.ai .bubble {
-      color: #e0e0e0;
+    .chat-box.polarity .chat-msg.ai .bubble { color: #e0e0e0; }
+    .chat-box.polarity .chat-msg.ai .bubble em { color: #ff6b6b; font-style: normal; }
+
+    .chat-context {
+      font-size: 10px;
+      color: #3a3e48;
+      letter-spacing: 1px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.03);
     }
 
-    .chat-box.polarity .chat-msg.ai .bubble em {
-      color: #ff6b6b;
-      font-style: normal;
+    /* How it works */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+      max-width: 1000px;
+    }
+
+    .how-step {
+      text-align: center;
+    }
+
+    .how-number {
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(255, 107, 107, 0.3);
+      margin-bottom: 16px;
+    }
+
+    .how-title {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .how-desc {
+      font-size: 13px;
+      color: #6a7080;
+      line-height: 1.6;
     }
 
     /* Features */
@@ -203,9 +220,7 @@
       max-width: 1000px;
     }
 
-    .feature {
-      text-align: center;
-    }
+    .feature { text-align: center; }
 
     .feature-icon {
       width: 80px;
@@ -234,6 +249,32 @@
       line-height: 1.6;
     }
 
+    /* Stats */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .stat-block { text-align: center; }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 300;
+      color: #ff6b6b;
+      margin-bottom: 8px;
+    }
+
+    .stat-desc {
+      font-size: 11px;
+      color: #4a5060;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     /* Real quote */
     .quote-box {
       background: rgba(255, 107, 107, 0.05);
@@ -253,12 +294,63 @@
       font-style: italic;
     }
 
-    .quote-source {
-      font-size: 13px;
-      color: #ff6b6b;
+    .quote-source { font-size: 13px; color: #ff6b6b; }
+
+    /* Revenue */
+    .revenue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
+      max-width: 900px;
+      width: 100%;
     }
 
-    /* Orb visual */
+    .revenue-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 36px;
+    }
+
+    .revenue-card.primary {
+      border-color: rgba(255, 107, 107, 0.2);
+    }
+
+    .revenue-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #4a5060;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .revenue-card.primary .revenue-label { color: #ff6b6b; }
+
+    .revenue-title {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .revenue-desc {
+      font-size: 13px;
+      color: #6a7080;
+      line-height: 1.7;
+    }
+
+    .revenue-example {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      font-size: 12px;
+      color: #8a90a0;
+      font-style: italic;
+    }
+
+    /* Orb */
     .orb {
       width: 200px;
       height: 200px;
@@ -277,7 +369,7 @@
       50% { transform: scale(1.02); box-shadow: 0 0 80px rgba(255, 107, 107, 0.5), 0 0 150px rgba(255, 107, 107, 0.3); }
     }
 
-    /* BrainID visual */
+    /* BrainID */
     .brainid-visual {
       display: flex;
       align-items: center;
@@ -310,10 +402,7 @@
       box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
     }
 
-    .brainid-name {
-      font-size: 18px;
-      color: #fff;
-    }
+    .brainid-name { font-size: 18px; color: #fff; }
 
     .brainid-stat {
       display: flex;
@@ -322,36 +411,13 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     }
 
-    .brainid-stat:last-child {
-      border-bottom: none;
-    }
+    .brainid-stat:last-child { border-bottom: none; }
+    .stat-label { font-size: 12px; color: #6a7080; }
+    .stat-value { font-size: 12px; color: #ff6b6b; }
 
-    .stat-label {
-      font-size: 12px;
-      color: #6a7080;
-    }
-
-    .stat-value {
-      font-size: 12px;
-      color: #ff6b6b;
-    }
-
-    .brainid-desc {
-      max-width: 400px;
-    }
-
-    .brainid-desc h3 {
-      font-size: 24px;
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .brainid-desc p {
-      font-size: 14px;
-      color: #6a7080;
-      line-height: 1.7;
-    }
+    .brainid-desc { max-width: 400px; }
+    .brainid-desc h3 { font-size: 24px; font-weight: 400; color: #fff; margin-bottom: 16px; }
+    .brainid-desc p { font-size: 14px; color: #6a7080; line-height: 1.7; }
 
     /* CTA */
     .cta {
@@ -373,7 +439,25 @@
       box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
     }
 
-    /* Scroll indicator */
+    .cta-secondary {
+      display: inline-block;
+      padding: 16px 40px;
+      background: transparent;
+      color: #ff6b6b;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 16px;
+      border: 1px solid rgba(255, 107, 107, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cta-secondary:hover {
+      border-color: #ff6b6b;
+      transform: translateY(-2px);
+    }
+
     .scroll-hint {
       position: absolute;
       bottom: 40px;
@@ -390,165 +474,85 @@
       50% { transform: translateX(-50%) translateY(8px); }
     }
 
-    /* Mobile responsive */
+    /* Slide divider */
+    .slide-divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(255, 107, 107, 0.2);
+      margin: 30px auto;
+    }
+
+    /* Mobile */
     @media (max-width: 768px) {
-      .slide {
-        padding: 40px 24px;
-      }
+      .slide { padding: 40px 24px; }
+      .logo { top: 24px; left: 24px; font-size: 10px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 28px; }
+      .subtitle { font-size: 14px; padding: 0 12px; }
 
-      .logo {
-        top: 24px;
-        left: 24px;
-        font-size: 10px;
-      }
+      .problem-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; padding: 0 12px; }
+      .problem-item { padding: 24px; }
 
-      h1 {
-        font-size: 36px;
-      }
+      .comparison { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; padding: 0 8px; }
+      .chat-box { padding: 20px; }
+      .chat-msg .bubble { font-size: 12px; }
 
-      h2 {
-        font-size: 28px;
-      }
+      .how-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; padding: 0 12px; }
+      .features { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; padding: 0 12px; }
+      .feature-icon { width: 60px; height: 60px; font-size: 18px; }
 
-      .subtitle {
-        font-size: 14px;
-        padding: 0 12px;
-      }
+      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; padding: 0 12px; }
+      .stat-number { font-size: 28px; }
 
-      /* Problem grid - stack on mobile */
-      .problem-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin-top: 40px;
-        padding: 0 12px;
-      }
+      .revenue-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; padding: 0 12px; }
 
-      .problem-item {
-        padding: 24px;
-      }
+      .brainid-visual { flex-direction: column; gap: 32px; margin-top: 40px; padding: 0 12px; }
+      .brainid-card { width: 100%; max-width: 320px; padding: 24px; }
+      .brainid-desc { text-align: center; padding: 0 12px; }
+      .brainid-desc h3 { font-size: 20px; }
+      .brainid-desc p { font-size: 13px; }
 
-      /* Comparison - stack on mobile */
-      .comparison {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 40px;
-        padding: 0 8px;
-      }
+      .quote-box { padding: 32px 24px; margin: 32px 12px 0; }
+      .quote-text { font-size: 18px; }
 
-      .chat-box {
-        padding: 20px;
-      }
-
-      .chat-msg .bubble {
-        font-size: 12px;
-      }
-
-      /* Features - stack on mobile */
-      .features {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        margin-top: 40px;
-        padding: 0 12px;
-      }
-
-      .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 18px;
-      }
-
-      /* BrainID - stack on mobile */
-      .brainid-visual {
-        flex-direction: column;
-        gap: 32px;
-        margin-top: 40px;
-        padding: 0 12px;
-      }
-
-      .brainid-card {
-        width: 100%;
-        max-width: 320px;
-        padding: 24px;
-      }
-
-      .brainid-desc {
-        text-align: center;
-        padding: 0 12px;
-      }
-
-      .brainid-desc h3 {
-        font-size: 20px;
-      }
-
-      .brainid-desc p {
-        font-size: 13px;
-      }
-
-      /* Quote */
-      .quote-box {
-        padding: 32px 24px;
-        margin: 32px 12px 0;
-      }
-
-      .quote-text {
-        font-size: 18px;
-      }
-
-      /* Orb */
-      .orb {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 32px;
-      }
-
-      .orb-glow {
-        width: 300px;
-        height: 300px;
-      }
-
-      /* CTA */
-      .cta {
-        padding: 14px 32px;
-        font-size: 13px;
-      }
-
-      .scroll-hint {
-        bottom: 24px;
-        font-size: 10px;
-      }
+      .orb { width: 140px; height: 140px; margin-bottom: 32px; }
+      .orb-glow { width: 300px; height: 300px; }
+      .cta { padding: 14px 32px; font-size: 13px; }
+      .cta-secondary { padding: 14px 32px; font-size: 13px; }
+      .scroll-hint { bottom: 24px; font-size: 10px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Slide 1: Title -->
+  <!-- Slide 1: Hook -->
   <div class="slide">
     <div class="logo">POLARITY</div>
     <div class="orb-glow" style="top: 30%; left: 50%; transform: translateX(-50%);"></div>
     <div class="orb"></div>
-    <h1>AI that <em>sees</em> you.</h1>
-    <p class="subtitle">Not another chatbot. A cognitive mirror that reflects who you are and who you're becoming.</p>
+    <h1>The first AI that <em>learns</em> you.</h1>
+    <p class="subtitle">Not a chatbot with memory. A system that builds a unique relationship with every person who uses it, and gets sharper with every conversation.</p>
     <div class="scroll-hint">SCROLL ↓</div>
   </div>
 
   <!-- Slide 2: The Problem -->
   <div class="slide">
     <div class="logo">POLARITY</div>
-    <h2>Current AI has a problem.</h2>
-    <p class="subtitle">It's trained to be helpful. Not to understand.</p>
+    <h2>Every AI starts from <em>zero</em>.</h2>
+    <p class="subtitle">Every conversation. Every session. The same generic system that doesn't know you, doesn't remember you, and treats everyone the same.</p>
 
     <div class="problem-grid">
       <div class="problem-item">
         <div class="problem-icon">≡</div>
-        <div class="problem-text">Generic advice that could apply to anyone</div>
+        <div class="problem-text">Same response to a CEO and a college student. No personalization that goes deeper than a name.</div>
       </div>
       <div class="problem-item">
         <div class="problem-icon">⌀</div>
-        <div class="problem-text">No memory of who you are or what matters to you</div>
+        <div class="problem-text">Memory products paste your old messages into a prompt. The model itself hasn't changed.</div>
       </div>
       <div class="problem-item">
         <div class="problem-icon">↺</div>
-        <div class="problem-text">Trained to please, not to push</div>
+        <div class="problem-text">Every product on the market is the same base model with a different wrapper. No one owns their model.</div>
       </div>
     </div>
   </div>
@@ -556,53 +560,55 @@
   <!-- Slide 3: The Comparison -->
   <div class="slide">
     <div class="logo">POLARITY</div>
-    <h2>Same question. <em>Different depth.</em></h2>
+    <h2>Same person. <em>Different system.</em></h2>
 
     <div class="comparison">
       <div class="chat-box">
         <div class="chat-label">Other AI</div>
         <div class="chat-msg user">
-          <div class="bubble">How do I take ahold of my potential?</div>
+          <div class="bubble">I keep starting things and not finishing them</div>
         </div>
         <div class="chat-msg ai">
-          <div class="bubble">Taking ahold of your potential involves self-reflection, goal-setting, and consistent action. Start by identifying your strengths and areas for growth. Create SMART goals that align with your values. Build positive habits and surround yourself with supportive people...</div>
+          <div class="bubble">That's a common challenge! Here are some strategies: break tasks into smaller steps, set deadlines, use accountability partners, reward yourself for milestones, and practice self-compassion...</div>
         </div>
+        <div class="chat-context">generic advice. could be for anyone.</div>
       </div>
 
       <div class="chat-box polarity">
         <div class="chat-label">Polarity</div>
         <div class="chat-msg user">
-          <div class="bubble">How do I take ahold of my potential?</div>
+          <div class="bubble">I keep starting things and not finishing them</div>
         </div>
         <div class="chat-msg ai">
-          <div class="bubble">Potential isn't found. <em>It's claimed.</em><br><br>Stop waiting for permission or a perfect plan. You already know your next move - you're just scared to admit it.<br><br>So what's the one thing you've been avoiding?</div>
+          <div class="bubble">You've said this three times now, but the pattern is more specific than that. You finish the <em>hard</em> parts. It's the last 10% you drop. What's actually happening there?</div>
         </div>
+        <div class="chat-context">200 exchanges of relationship data. knows your actual pattern.</div>
       </div>
     </div>
   </div>
 
-  <!-- Slide 4: The Science -->
+  <!-- Slide 4: How it works -->
   <div class="slide">
     <div class="logo">POLARITY</div>
     <div class="orb-glow" style="top: 20%; right: 10%;"></div>
-    <h2>Built on <em>neuroscience</em>.</h2>
-    <p class="subtitle">Not prompt engineering. Real cognitive architecture.</p>
+    <h2>How it <em>actually</em> works.</h2>
+    <p class="subtitle">Every conversation measures the relationship in real time. The data shapes how Polarity responds to you.</p>
 
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">◎</div>
-        <div class="feature-title">Cognitive Modeling</div>
-        <div class="feature-desc">Maps how you actually process information, not just what you say</div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-number">01</div>
+        <div class="how-title">You talk. It measures.</div>
+        <div class="how-desc">Every exchange captures your communication style, cognitive patterns, vocabulary, energy, and how the relationship is tracking. Continuous measurements, not chat logs.</div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">∿</div>
-        <div class="feature-title">Neural Patterns</div>
-        <div class="feature-desc">Identifies the rhythms in your thinking that reveal intent</div>
+      <div class="how-step">
+        <div class="how-number">02</div>
+        <div class="how-title">The relationship builds.</div>
+        <div class="how-desc">Your dyadic profile evolves with every interaction. Alignment, trust, attunement, behavioral patterns, the topics that matter to you. A living model of the relationship.</div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">⧖</div>
-        <div class="feature-title">Temporal Dynamics</div>
-        <div class="feature-desc">Tracks how your cognition evolves across sessions</div>
+      <div class="how-step">
+        <div class="how-number">03</div>
+        <div class="how-title">Responses adapt to you.</div>
+        <div class="how-desc">Polarity doesn't guess how to talk to you. The data tells it. How long to respond, when to push back, what to reference, when to be brief. Shaped by the relationship, not a generic prompt.</div>
       </div>
     </div>
   </div>
@@ -611,40 +617,70 @@
   <div class="slide">
     <div class="logo">POLARITY</div>
     <h2>Your <em>BrainID</em></h2>
-    <p class="subtitle">A living cognitive signature that evolves with every conversation.</p>
+    <p class="subtitle">A cognitive fingerprint that evolves with every conversation. Yours. Portable. The data that makes Polarity yours.</p>
 
     <div class="brainid-visual">
       <div class="brainid-card">
         <div class="brainid-header">
           <div class="brainid-orb"></div>
-          <div class="brainid-name">theo</div>
+          <div class="brainid-name">user_4a8f</div>
         </div>
         <div class="brainid-stat">
-          <span class="stat-label">Dominant Mode</span>
-          <span class="stat-value">Strategic Observer</span>
+          <span class="stat-label">Alignment</span>
+          <span class="stat-value">0.72</span>
         </div>
         <div class="brainid-stat">
-          <span class="stat-label">Decision Style</span>
-          <span class="stat-value">Watch → Move</span>
+          <span class="stat-label">Trust Signals</span>
+          <span class="stat-value">14</span>
         </div>
         <div class="brainid-stat">
-          <span class="stat-label">Current Pattern</span>
-          <span class="stat-value">Building momentum</span>
+          <span class="stat-label">Relationship Age</span>
+          <span class="stat-value">47 days</span>
         </div>
         <div class="brainid-stat">
-          <span class="stat-label">Confidence</span>
-          <span class="stat-value">73%</span>
+          <span class="stat-label">Confirmed Patterns</span>
+          <span class="stat-value">8</span>
+        </div>
+        <div class="brainid-stat">
+          <span class="stat-label">Exchanges</span>
+          <span class="stat-value">312</span>
         </div>
       </div>
 
       <div class="brainid-desc">
-        <h3>The more you use it, the sharper it gets.</h3>
-        <p>Your BrainID captures how you think, not just what you say. It's the foundation for cognitive authentication - your mind becomes your password.</p>
+        <h3>Day 1: blank. Day 47: it knows you.</h3>
+        <p>The BrainID captures how you think, how you communicate, what drives you, and how the relationship has evolved. Not because we told it to. Because 312 exchanges of real data shaped it.</p>
       </div>
     </div>
   </div>
 
-  <!-- Slide 6: Real moment -->
+  <!-- Slide 6: Why it matters / Why pay -->
+  <div class="slide">
+    <div class="logo">POLARITY</div>
+    <div class="orb-glow" style="top: 40%; left: 20%;"></div>
+    <h2>Why people <em>stay</em>.</h2>
+    <p class="subtitle">The more you use Polarity, the more it understands. Switching to another AI means going back to being a stranger. That's not a lock-in strategy. It's real value that compounds.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">◎</div>
+        <div class="feature-title">Gets sharper</div>
+        <div class="feature-desc">Not a static product. Every conversation makes it more precise for you. Your patterns, your vocabulary, your rhythm.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">∿</div>
+        <div class="feature-title">Actually personal</div>
+        <div class="feature-desc">Not your name pasted into a template. Your behavioral patterns, cognitive modes, relationship dynamics shaping every response.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⧖</div>
+        <div class="feature-title">Notices what you don't</div>
+        <div class="feature-desc">Drift detection, pattern surfacing, cognitive mode tracking. It sees shifts in how you think before you do.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Real moment -->
   <div class="slide">
     <div class="logo">POLARITY</div>
     <div class="orb-glow" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
@@ -652,20 +688,67 @@
 
     <div class="quote-box">
       <div class="quote-text">"damn. alr, you got me."</div>
-      <div class="quote-source">— First-time user, 3 messages in</div>
+      <div class="quote-source">First-time user, 3 messages in</div>
     </div>
 
-    <p class="subtitle" style="margin-top: 40px;">That's the moment people realize they're actually being seen.</p>
+    <p class="subtitle" style="margin-top: 40px;">People know instantly when something actually understands them versus when it's performing understanding.</p>
   </div>
 
-  <!-- Slide 7: CTA -->
+  <!-- Slide 8: The Moat -->
+  <div class="slide">
+    <div class="logo">POLARITY</div>
+    <h2>The <em>endgame</em>.</h2>
+    <p class="subtitle">Every AI company is wrapping the same base model. We're building our own.</p>
+
+    <div class="how-grid" style="margin-top: 50px;">
+      <div class="how-step">
+        <div class="how-number">Now</div>
+        <div class="how-title">Data collection.</div>
+        <div class="how-desc">Every conversation builds the dataset. Anonymized, aggregated dyadic measurements across all users. The product and the training data are the same thing.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-number">Next</div>
+        <div class="how-title">Fine-tune.</div>
+        <div class="how-desc">Train on aggregated relationship data. The model learns how dyadic relationships work as a native capability, not a prompt hack. No one else has this data.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-number">Then</div>
+        <div class="how-title">Own the model.</div>
+        <div class="how-desc">A foundation model that understands relationships natively. The prompt becomes pure data injection. The intelligence is in the weights. That's the moat.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: Revenue -->
+  <div class="slide">
+    <div class="logo">POLARITY</div>
+    <h2>Two <em>revenue</em> streams.</h2>
+    <p class="subtitle">The product generates the data. The data generates the revenue.</p>
+
+    <div class="revenue-grid">
+      <div class="revenue-card">
+        <div class="revenue-label">Consumer</div>
+        <div class="revenue-title">Polarity subscription</div>
+        <div class="revenue-desc">Users pay for a system that actually knows them. The longer they use it, the more valuable it becomes. Natural retention — switching means losing the relationship.</div>
+      </div>
+      <div class="revenue-card primary">
+        <div class="revenue-label">Enterprise</div>
+        <div class="revenue-title">Behavioral analytics</div>
+        <div class="revenue-desc">Aggregated, anonymous population insights. No individual data exposed. Pure statistics about how people actually think and behave.</div>
+        <div class="revenue-example">"20% of users shift to execution mode on Mondays. 73% engage most deeply between 9-11pm. Decision fatigue peaks on Wednesdays."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: CTA -->
   <div class="slide">
     <div class="logo">POLARITY</div>
     <div class="orb-glow" style="top: 40%; left: 50%; transform: translateX(-50%);"></div>
     <div class="orb"></div>
-    <h1>Ready to meet <em>yourself</em>?</h1>
-    <p class="subtitle">Most AI gives you answers. This one gives you clarity.</p>
-    <a href="mailto:polarity@polarity-lab.com" class="cta">Get Early Access</a>
+    <h1>AI that <em>compounds</em>.</h1>
+    <p class="subtitle">Every other AI product is a wrapper. This is a relationship engine that gets smarter with every user. Fund Layer 1 and the moat is permanent.</p>
+    <a href="mailto:polarity@polarity-lab.com" class="cta">Let's Talk</a>
+    <a href="mailto:polarity@polarity-lab.com" class="cta-secondary">polarity@polarity-lab.com</a>
   </div>
 
 </body>
