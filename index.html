@@ -300,9 +300,9 @@
     .revenue-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
-      max-width: 900px;
+      gap: 28px;
+      margin-top: 50px;
+      max-width: 1000px;
       width: 100%;
     }
 
@@ -310,7 +310,7 @@
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 16px;
-      padding: 36px;
+      padding: 32px;
     }
 
     .revenue-card.primary {
@@ -318,36 +318,81 @@
     }
 
     .revenue-label {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       color: #4a5060;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .revenue-card.primary .revenue-label { color: #ff6b6b; }
 
     .revenue-title {
-      font-size: 20px;
+      font-size: 18px;
       color: #fff;
       font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .revenue-price {
+      font-size: 13px;
+      color: #ff6b6b;
       margin-bottom: 12px;
+      font-weight: 500;
     }
 
     .revenue-desc {
-      font-size: 13px;
+      font-size: 12px;
       color: #6a7080;
       line-height: 1.7;
     }
 
+    .revenue-features {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .revenue-feature {
+      font-size: 11px;
+      color: #8a90a0;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .revenue-feature::before {
+      content: '→';
+      color: #ff6b6b;
+      font-size: 10px;
+    }
+
     .revenue-example {
-      margin-top: 16px;
-      padding: 12px 16px;
+      margin-top: 14px;
+      padding: 10px 14px;
       background: rgba(255, 255, 255, 0.02);
       border-radius: 8px;
-      font-size: 12px;
+      font-size: 11px;
       color: #8a90a0;
       font-style: italic;
+    }
+
+    .revenue-summary {
+      margin-top: 40px;
+      text-align: center;
+      max-width: 700px;
+    }
+
+    .revenue-summary p {
+      font-size: 14px;
+      color: #6a7080;
+      line-height: 1.7;
+    }
+
+    .revenue-summary em {
+      color: #ff6b6b;
+      font-style: normal;
     }
 
     /* Orb */
@@ -504,7 +549,10 @@
       .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; padding: 0 12px; }
       .stat-number { font-size: 28px; }
 
-      .revenue-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; padding: 0 12px; }
+      .revenue-grid { grid-template-columns: 1fr !important; gap: 20px; margin-top: 40px; padding: 0 12px; }
+      .revenue-card { padding: 24px; }
+      .revenue-summary { margin-top: 28px; padding: 0 12px; }
+      .revenue-summary p { font-size: 12px; }
 
       .brainid-visual { flex-direction: column; gap: 32px; margin-top: 40px; padding: 0 12px; }
       .brainid-card { width: 100%; max-width: 320px; padding: 24px; }
@@ -719,24 +767,48 @@
     </div>
   </div>
 
-  <!-- Slide 9: Revenue -->
+  <!-- Slide 9: Who pays and why -->
   <div class="slide">
     <div class="logo">POLARITY</div>
-    <h2>Two <em>revenue</em> streams.</h2>
-    <p class="subtitle">The product generates the data. The data generates the revenue.</p>
+    <h2>Who <em>pays</em>. Why they stay.</h2>
+    <p class="subtitle">The product generates the data. The data unlocks new revenue. Each tier feeds the next.</p>
 
-    <div class="revenue-grid">
+    <div class="revenue-grid" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
       <div class="revenue-card">
-        <div class="revenue-label">Consumer</div>
+        <div class="revenue-label">Now — Consumers</div>
         <div class="revenue-title">Polarity subscription</div>
-        <div class="revenue-desc">Users pay for a system that actually knows them. The longer they use it, the more valuable it becomes. Natural retention — switching means losing the relationship.</div>
+        <div class="revenue-price">$9–15/mo</div>
+        <div class="revenue-desc">An AI that actually knows you. Gets sharper every conversation. Switching means starting over — that's natural retention, not lock-in.</div>
+        <div class="revenue-features">
+          <div class="revenue-feature">Persistent relationship memory</div>
+          <div class="revenue-feature">Pattern + drift detection</div>
+          <div class="revenue-feature">Portable BrainID they own</div>
+        </div>
       </div>
+
+      <div class="revenue-card">
+        <div class="revenue-label">Now — Researchers</div>
+        <div class="revenue-title">Research workstation</div>
+        <div class="revenue-price">Per-seat / institutional license</div>
+        <div class="revenue-desc">Study how people actually think — with real cognitive data, not self-reported surveys. Run studies, enroll participants, export everything.</div>
+        <div class="revenue-features">
+          <div class="revenue-feature">IRB-ready study management</div>
+          <div class="revenue-feature">Pseudonymized participant data</div>
+          <div class="revenue-feature">JSON/CSV cognitive exports</div>
+        </div>
+      </div>
+
       <div class="revenue-card primary">
-        <div class="revenue-label">Enterprise</div>
-        <div class="revenue-title">Behavioral analytics</div>
-        <div class="revenue-desc">Aggregated, anonymous population insights. No individual data exposed. Pure statistics about how people actually think and behave.</div>
-        <div class="revenue-example">"20% of users shift to execution mode on Mondays. 73% engage most deeply between 9-11pm. Decision fatigue peaks on Wednesdays."</div>
+        <div class="revenue-label">Next — Enterprise</div>
+        <div class="revenue-title">Population analytics</div>
+        <div class="revenue-price">API + data licensing</div>
+        <div class="revenue-desc">Aggregated, anonymous insights across thousands of users. No individual data exposed. The behavioral dataset no one else has.</div>
+        <div class="revenue-example">"20% of users shift to execution mode on Mondays. Decision fatigue peaks on Wednesdays. 73% engage most deeply 9-11pm."</div>
       </div>
+    </div>
+
+    <div class="revenue-summary">
+      <p>Every user makes the model smarter. More users → richer data → better model → <em>wider moat</em>. The flywheel is the business.</p>
     </div>
   </div>
 
